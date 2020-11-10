@@ -1,1 +1,37 @@
-<!DOCTYPE html><!DOCTYPE html>
+<!DOCTYPE html>
+<head>
+    <title>BOFA</title>
+</head>
+<body>
+    <h1>Hi this your new page</h1>
+    <div>
+        {% for i in information %}
+        <h2>{{ i.short_info }}</h2>
+        {% endfor %}
+    </div>
+    <div>
+        {% for dl in du_lead %}
+        <h2>{{ dl.du_lead }}</h2>
+        {% endfor %}
+    </div>
+    <div>
+        {% for m in manager %}
+        <h2>{{ m.manager }}</h2>
+        {% endfor %}
+    </div>
+    <div>
+        {% for am in ams %}
+        <h2>{{ am.ams }}</h2>
+        {% endfor %}
+    </div>
+    
+    <div>
+        {% for lead in leads %}
+        <h2>{{ lead.leads }}</h2>
+        {% endfor %}
+    </div>
+</body>   
+
+
+
+<!DOCTYPE html>
