@@ -1,5 +1,6 @@
 from django.shortcuts import render
-from.models import Info,Du_lead,Manager,Ams,Leads
+from .Forms import CertificateForm
+from.models import Info,Du_lead,Manager,Ams,Leads,Certifications
 
 # Create your views here.
 def index(request):
@@ -18,7 +19,14 @@ def projects(request):
     return render(request, 'project.html')
 
 def certifications(request):
-    return render(request, 'certification.html')
+
+    form = CertificateForm()
+    if request.method == 'POST':
+        form = CertificateForm(request.POST)
+        if form.is_valid():
+            form.save()
+    context = {'form': form}
+    return render(request, 'certification.html', context)
 
 def team(request):
     return render(request, 'team.html')

@@ -11,3 +11,9 @@ class Ams(models.Model):
     ams = models.CharField(max_length=250)
 class Leads(models.Model):
     leads = models.CharField(max_length=250)
+class Certifications(models.Model):
+    certificate_Organisation = models.CharField(max_length=500)
+    certificate_Name = models.CharField(max_length=500)
+    date_of_Completion = models.DateField()
+    expiration_Date = models.DateField()
+
