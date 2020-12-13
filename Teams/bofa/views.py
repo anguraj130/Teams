@@ -11,3 +11,14 @@ def index(request):
     return render(request, 'index.html', {'information': information, 'du_lead': du_lead, 
     'manager': manager, 'ams': ams, 'leads': leads})
 
+def leave(request):
+    return render(request, 'leave.html')
+
+def projects(request):
+    return render(request, 'project.html')
+
+def certifications(request):
+    return render(request, 'certification.html')
+
+def team(request):
+    return render(request, 'team.html')

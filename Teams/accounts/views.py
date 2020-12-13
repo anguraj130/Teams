@@ -54,3 +54,5 @@ def logout(request):
 
 def home(request):
     return redirect('/')
+
+
